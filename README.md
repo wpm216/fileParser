@@ -73,7 +73,7 @@ with File(path) as f:
 Write held (and optinally transformed) lines to a new file. 
 Can skip lines by defining `junk`:
 ```
-with File(path) as f, File(new_file_path, 'w+) as new:
+with File(path) as f, File(new_file_path, 'w+') as new:
     # emphasize our appreciation for mangoes over apples
     transform = lambda x: x.replace("mango", "MANGO").replace("mangoes", "MANGOES")
     f.advance_to(-1, tf = transform, write_to = new, junk = r"(\s+)apple(\s+)")
