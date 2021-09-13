@@ -5,6 +5,13 @@ from copy import deepcopy
 
 class File:
     """
+    File parser wrapped around in-built python file object.
+    
+    Can be instantiated with the "with" context; files can be opened in any mode:
+        ```
+        with File(filepath, 'w+') as f:
+            f.write("Hello world!")
+        ```
     """
 
     def __init__(self, fp, mode = 'r', **kwargs):
