@@ -336,7 +336,6 @@ class File:
 
         not_read_any = True # Allow the method to advance if it's looking
                             #  for a future line that matches the first one
-        print("hold is", hold)
         while condition(keylist, n_read, n) or not_read_any:
 
             # Read next line (default) or include it, if user requests.
